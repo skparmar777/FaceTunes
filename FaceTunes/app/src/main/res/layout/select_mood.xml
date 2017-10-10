@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:id="@+id/emoji_mood_table"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:id="@+id/happy_emojis"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- Display Happy emojis here -->
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/sad_emojis"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- Display Sad emojis here -->
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/angry_emojis"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- Display Angry emojis here -->
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/frustrated_emojis"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- Display Frustrated emojis here -->
+
+        </TableRow>
+
+
+    </TableLayout>
+</LinearLayout>
