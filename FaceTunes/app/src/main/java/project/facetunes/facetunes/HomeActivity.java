@@ -20,7 +20,7 @@ public class HomeActivity extends AppCompatActivity {
         launchEmojis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(HomeActivity.this, SelectMood.class);
+                Intent i = new Intent(HomeActivity.this, SettingsActivity.class);
                 startActivity(i);
             }
         });
