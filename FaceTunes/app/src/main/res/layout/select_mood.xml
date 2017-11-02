@@ -24,7 +24,7 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/angry_emojis"
+            android:id="@+id/annoyed_emojis"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <!-- Display Angry emojis here -->
@@ -32,7 +32,15 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/frustrated_emojis"
+            android:id="@+id/angry_emojis"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- Display Frustrated emojis here -->
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tired_emojis"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <!-- Display Frustrated emojis here -->

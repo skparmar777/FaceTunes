@@ -46,10 +46,9 @@ public class SelectMood extends AppCompatActivity {
                 TableRow currentTableRow = (TableRow)(emojiTable.getChildAt(row));
 
                 Button currentButton = new Button(this);
-
                 currentButton.setText(getEmojiByUnicode(currentEmoji));
 
-                //sets onClick listener to row, column into an int array
+                //returns the unicode value of selected emoji
                 currentButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
