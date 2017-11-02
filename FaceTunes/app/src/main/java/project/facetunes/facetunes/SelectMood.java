@@ -17,9 +17,8 @@ import android.widget.TableRow;
 
 public class SelectMood extends AppCompatActivity {
 
-    public static int[] emojiClickedVal = new int[2];
-    public static final int EMOJIS_PER_CATEGORY = 4;
-    public static final String MOOD_VAL = "Key Value for activity launch on click";
+    public static final int EMOJIS_PER_CATEGORY = 5;
+    public static final String MOOD_VAL = "Key Value for specific mood";
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -27,35 +26,37 @@ public class SelectMood extends AppCompatActivity {
         setContentView(R.layout.select_mood);
 
         TableLayout emojiTable = (TableLayout) findViewById(R.id.emoji_mood_table);
-        TableRow happyEmojis = (TableRow) findViewById(R.id.happy_emojis);
 
         //creates 2D button Array with emoji tables
         final Button[][] emojiSet =
                 new Button[emojiTable.getChildCount()][EMOJIS_PER_CATEGORY];
 
-        //TODO: gather images and populate this array
-        final Drawable emojisImages[][] = new Drawable[emojiSet.length][emojiSet[0].length];
+        //Unicode Values of Emoji Set
+        final int emojisUnicode[][] = {
+                {0x1F642, 0x1F603, 0x1F600, 0x1F604, 0x1F606,},
+                {0x2639, 0x1F614, 0x1F623, 0x1F616, 0x1F622 },
+                {0x1F615, 0x1F644, 0x1F612, 0x1F926, 0x1F611 },
+                {0x1F610, 0x1F620, 0x1F624, 0x1F621, 0x1F47F },
+                {0x1F636, 0x1F625, 0x1F613, 0x1F634, 0x1F62A },
+        };
 
         for(int row = 0; row < emojiSet.length; row++){
             for(int col = 0; col < emojiSet[row].length; col++){
-                final int currentRow = row;
-                final int currentCol = col;
+                final int currentEmoji = emojisUnicode[row][col];
                 TableRow currentTableRow = (TableRow)(emojiTable.getChildAt(row));
 
                 Button currentButton = new Button(this);
-                //sets image
-                currentButton.setBackground(emojisImages[row][col]);
+
+                currentButton.setText(getEmojiByUnicode(currentEmoji));
 
                 //sets onClick listener to row, column into an int array
                 currentButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        emojiClickedVal[0] = currentRow;
-                        emojiClickedVal[1] = currentCol;
 
                         //TODO CHANGE TO NEW ACTIVITY WHEN MOOD GETS SELECTED
                         Intent myIntent = new Intent(SelectMood.this, HomeActivity.class);
-                        myIntent.putExtra(MOOD_VAL, emojiClickedVal);
+                        myIntent.putExtra(MOOD_VAL, currentEmoji);
                         startActivity(myIntent);
 
                     }
@@ -64,7 +65,9 @@ public class SelectMood extends AppCompatActivity {
                 currentTableRow.addView(currentButton);
             }
         }
+    }
 
-
+    public String getEmojiByUnicode(int unicodeVal){
+        return new String(Character.toChars(unicodeVal));
     }
 }
