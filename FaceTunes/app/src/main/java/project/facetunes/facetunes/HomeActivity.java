@@ -8,6 +8,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -16,30 +17,41 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        final Button launchEmojis = (Button) findViewById(R.id.launchEmojis);
 
-        launchEmojis.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(HomeActivity.this, SelectMood.class);
-                startActivity(i);
-            }
-        });
+
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu){
+    public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        switch (item.getItemId()){
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_liked_songs:
+                //Start liked songs activity
+                Toast.makeText(this,
+                        "Start Liked Songs Activity", Toast.LENGTH_SHORT).show();
+                return true;
+
+            case R.id.menu_playlist:
+                //Start playlist activity
+                Toast.makeText(this,
+                        "Start Playlist Activity", Toast.LENGTH_SHORT).show();
+                return true;
+
+            case R.id.menu_select_mood:
+                Intent moodActivity = new Intent(HomeActivity.this, SelectMood.class);
+                startActivity(moodActivity);
+                return true;
+
             case R.id.menu_settings:
-                Intent i = new Intent(HomeActivity.this, SettingsActivity.class);
-                startActivity(i);
+                Intent settingsActivty =
+                        new Intent(HomeActivity.this, SettingsActivity.class);
+                startActivity(settingsActivty);
                 return true;
 
             default:

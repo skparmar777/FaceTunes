@@ -1,17 +1,12 @@
 package project.facetunes.facetunes;
 
 import android.content.Intent;
-import android.graphics.Typeface;
-import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TableLayout;
 import android.widget.TableRow;
-import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -44,6 +39,9 @@ public class SelectMood extends AppCompatActivity {
                 {0x1F636, 0x1F625, 0x1F613, 0x1F634, 0x1F62A},
         };
 
+        //TODO Make it faster by storing data on first launch
+        //TODO TEST ON GOOGLE PIXEL
+        //Maybe use shared preferences
         for (int row = 0; row < emojiSet.length; row++) {
             for (int col = 0; col < emojiSet[row].length; col++) {
 

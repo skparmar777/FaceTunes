@@ -9,6 +9,9 @@
 
     <!-- STRINGS FOR MENU ITEMS -->
     <string name="menu_settings">Settings</string>
+    <string name="menu_liked_songs">Liked Songs</string>
+    <string name="menu_playlist">My Playlist</string>
+    <string name="menu_select_mood">Select Mood</string>
 
 
     <!-- Strings related to Settings -->
