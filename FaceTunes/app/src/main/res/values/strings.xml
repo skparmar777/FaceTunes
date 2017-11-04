@@ -9,6 +9,8 @@
 
     <!-- Blacklisted Items Activity Strings -->
     <string name="blacklisted_items_title">Blocked Items</string>
+    <string name="unblock_item_title">Unblock this item?</string>
+    <string name="unblock_item_yes">Yes</string>
 
     <!-- STRINGS FOR MENU ITEMS -->
     <string name="menu_settings">Settings</string>
