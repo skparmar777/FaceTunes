@@ -41,12 +41,9 @@ public class HomeActivity extends AppCompatActivity {
 
             case R.id.menu_playlist:
                 //Start playlist activity
-//                Toast.makeText(this,
-//                        "Start Playlist Activity", Toast.LENGTH_SHORT).show();
-                Intent blacklistedItems = new Intent(HomeActivity.this, BlacklistedItems.class);
-                count++;
-                blacklistedItems.putExtra(BlacklistedItems.BLOCK_SONG, "SONG TO BLOCK " + count);
-                startActivity(blacklistedItems);
+                Toast.makeText(this,
+                        "Start Playlist Activity", Toast.LENGTH_SHORT).show();
+
                 return true;
 
             case R.id.menu_select_mood:
@@ -55,9 +52,10 @@ public class HomeActivity extends AppCompatActivity {
                 return true;
 
             case R.id.menu_settings:
-                Intent settingsActivty =
-                        new Intent(HomeActivity.this, SettingsActivity.class);
-                startActivity(settingsActivty);
+                Intent blacklistedItems = new Intent(HomeActivity.this, BlacklistedItems.class);
+                count++;
+                blacklistedItems.putExtra(BlacklistedItems.BLOCK_SONG, "SONG TO BLOCK " + count);
+                startActivity(blacklistedItems);
                 return true;
 
             default:
