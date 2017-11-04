@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 public class HomeActivity extends AppCompatActivity {
 
+    private int count = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,8 +41,12 @@ public class HomeActivity extends AppCompatActivity {
 
             case R.id.menu_playlist:
                 //Start playlist activity
-                Toast.makeText(this,
-                        "Start Playlist Activity", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this,
+//                        "Start Playlist Activity", Toast.LENGTH_SHORT).show();
+                Intent blacklistedItems = new Intent(HomeActivity.this, BlacklistedItems.class);
+                count++;
+                blacklistedItems.putExtra(BlacklistedItems.BLOCK_SONG, "SONG TO BLOCK " + count);
+                startActivity(blacklistedItems);
                 return true;
 
             case R.id.menu_select_mood:

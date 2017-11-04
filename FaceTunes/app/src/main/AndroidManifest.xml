@@ -20,6 +20,7 @@
             android:name=".SelectMood"
             android:label="@string/select_mood_title"
             android:parentActivityName=".HomeActivity" />
+
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"
@@ -28,6 +29,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="project.facetunes.facetunes.HomeActivity" />
         </activity>
+
+        <activity
+            android:name=".BlacklistedItems"
+            android:label="@string/blacklisted_items_title">
+
+        </activity>
+
     </application>
 
 </manifest>
