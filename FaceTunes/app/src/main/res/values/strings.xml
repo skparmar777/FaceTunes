@@ -3,14 +3,19 @@
     <string name="title_activity_settings">Settings</string>
     <string name="launch_emojis">Select Mood</string>
 
-    <!-- SELECT MOOD ACTIVITY STRINGS -->
+    <!-- Select Mood Activity Strings -->
     <string name="select_mood_title">Select Mood</string>
     <string name="sm_happy_button">Happy</string>
 
     <!-- Blacklisted Items Activity Strings -->
     <string name="blacklisted_items_title">Blocked Items</string>
-    <string name="unblock_item_title">Unblock this item?</string>
-    <string name="unblock_item_yes">Yes</string>
+
+    <!-- Liked Songs Activity Strings -->
+    <string name="liked_songs_title">Liked Songs</string>
+
+    <!-- Alert Dialog Strings -->
+    <string name="remove_item_title">Remove this item?</string>
+    <string name="remove_item_yes">Yes</string>
 
     <!-- STRINGS FOR MENU ITEMS -->
     <string name="menu_settings">Settings</string>

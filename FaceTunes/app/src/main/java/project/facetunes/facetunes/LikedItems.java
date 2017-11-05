@@ -15,34 +15,34 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class BlacklistedItems extends AppCompatActivity {
+public class LikedItems extends AppCompatActivity {
 
-    public final static String BLOCKED_ITEMS_LIST_PREF = "KEY FOR BLOCKED ITEMS PREFERENCES";
+    public final static String LIKED_ITEMS_LIST_PREF = "KEY FOR LIKED ITEMS PREFERENCES";
 
     /**
-     * Type BlacklistedItems.BLOCK_SONG in intent.putStringExtra() to add song to blocked list.
+     * Type LikedItems.LIKE_ITEM in intent.putStringExtra() to add song to liked list.
      */
-    public final static String BLOCK_ITEM = "STRING TO BLOCK A SONG";
+    public final static String LIKE_ITEM = "STRING TO BLOCK A SONG";
 
-    SharedPreferences blItemsPref;
-    SharedPreferences.Editor blItemsPrefEdit;
+    SharedPreferences likedItemsPref;
+    SharedPreferences.Editor likedItemsPrefEdit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_blacklisted_items);
+        setContentView(R.layout.activity_liked_items);
 
-        final ListView blockedItemsListView = (ListView) findViewById(R.id.blocked_items_list);
+        final ListView likedItemsListView = (ListView) findViewById(R.id.liked_items_list);
 
-        blItemsPref = getSharedPreferences(BLOCKED_ITEMS_LIST_PREF, MODE_PRIVATE);
-        blItemsPrefEdit = blItemsPref.edit();
+        likedItemsPref = getSharedPreferences(LIKED_ITEMS_LIST_PREF, MODE_PRIVATE);
+        likedItemsPrefEdit = likedItemsPref.edit();
 
         Intent intent = getIntent();
 
-        if (intent.hasExtra(BLOCK_ITEM)) {
-            String blockedItem = intent.getStringExtra(BLOCK_ITEM);
-            blItemsPrefEdit.putString(blockedItem, blockedItem);
-            blItemsPrefEdit.apply();
+        if (intent.hasExtra(LIKE_ITEM)) {
+            String blockedItem = intent.getStringExtra(LIKE_ITEM);
+            likedItemsPrefEdit.putString(blockedItem, blockedItem);
+            likedItemsPrefEdit.apply();
         }
 
         //FOR TESTING
@@ -51,22 +51,22 @@ public class BlacklistedItems extends AppCompatActivity {
 //        }
 //        clearSharedPref();
 
-        populateListView(blockedItemsListView);
+        populateListView(likedItemsListView);
 
 
-        blockedItemsListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+        likedItemsListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(BlacklistedItems.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(LikedItems.this);
                 builder.setTitle(R.string.remove_item_title)
                         .setPositiveButton(R.string.remove_item_yes, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 String blockedItemName =
-                                        blockedItemsListView.getItemAtPosition(position).toString();
-                                blItemsPrefEdit.remove(blockedItemName);
-                                blItemsPrefEdit.apply();
-                                populateListView(blockedItemsListView);
+                                        likedItemsListView.getItemAtPosition(position).toString();
+                                likedItemsPrefEdit.remove(blockedItemName);
+                                likedItemsPrefEdit.apply();
+                                populateListView(likedItemsListView);
                             }
                         })
                         .show();
@@ -79,8 +79,8 @@ public class BlacklistedItems extends AppCompatActivity {
 
     //FOR TESTING PURPOSES
     private void clearSharedPref() {
-        blItemsPrefEdit.clear();
-        blItemsPrefEdit.commit();
+        likedItemsPrefEdit.clear();
+        likedItemsPrefEdit.commit();
     }
 
     /**
@@ -91,9 +91,9 @@ public class BlacklistedItems extends AppCompatActivity {
     private void populateListView(ListView lv) {
         ArrayList<String> aList = new ArrayList<>();
 
-        for (String key : blItemsPref.getAll().keySet()) {
+        for (String key : likedItemsPref.getAll().keySet()) {
             //Populates the array list with all values besides the unique key count
-            aList.add(blItemsPref.getString(key, ""));
+            aList.add(likedItemsPref.getString(key, ""));
         }
 
         //Alphabetical order sort
@@ -105,7 +105,7 @@ public class BlacklistedItems extends AppCompatActivity {
         });
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(
-                BlacklistedItems.this,
+                LikedItems.this,
                 android.R.layout.simple_list_item_1,
                 aList
         );
