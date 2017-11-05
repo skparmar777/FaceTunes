@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">FaceTunes</string>
     <string name="title_activity_settings">Settings</string>
-    <string name="launch_emojis">Select Mood</string>
+    <string name="test_button">Clear Data</string>
 
     <!-- Select Mood Activity Strings -->
     <string name="select_mood_title">Select Mood</string>

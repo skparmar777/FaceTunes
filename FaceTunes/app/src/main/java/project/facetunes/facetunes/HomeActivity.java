@@ -40,7 +40,7 @@ public class HomeActivity extends AppCompatActivity {
                 blockedItemsEdit.apply();
                 count = 0;
                 Toast.makeText(HomeActivity.this,
-                        "Cleared Shared Preferences", Toast.LENGTH_SHORT).show();
+                        "Cleared Data", Toast.LENGTH_SHORT).show();
             }
         });
         //END TEST OF SHARED PREFERENCES
