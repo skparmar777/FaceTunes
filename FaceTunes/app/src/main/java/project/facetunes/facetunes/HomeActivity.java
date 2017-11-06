@@ -14,30 +14,23 @@ import android.widget.Toast;
 public class HomeActivity extends AppCompatActivity {
 
     private int count = 0;
+    ModifyItem modifyItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        modifyItem = new ModifyItem(HomeActivity.this);
+
         //TESTING SHARED PREFERENCES
-        final SharedPreferences likedItems = getSharedPreferences(
-                LikedItems.LIKED_ITEMS_LIST_PREF, MODE_PRIVATE);
-        final SharedPreferences.Editor likedItemsEdit = likedItems.edit();
-
-        final SharedPreferences blockedItems = getSharedPreferences(
-                BlacklistedItems.BLOCKED_ITEMS_LIST_PREF, MODE_PRIVATE);
-        final SharedPreferences.Editor blockedItemsEdit = blockedItems.edit();
-
         final Button clearPrefBtn = (Button) findViewById(R.id.clearPrefs);
 
         clearPrefBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                likedItemsEdit.clear();
-                likedItemsEdit.apply();
-                blockedItemsEdit.clear();
-                blockedItemsEdit.apply();
+                modifyItem.clearBlockedItems();
+                modifyItem.clearLikedItems();
                 count = 0;
                 Toast.makeText(HomeActivity.this,
                         "Cleared Data", Toast.LENGTH_SHORT).show();
@@ -61,7 +54,8 @@ public class HomeActivity extends AppCompatActivity {
                 //Start liked songs activity
                 Intent likedItemsActivity = new Intent(HomeActivity.this, LikedItems.class);
                 count++;
-                likedItemsActivity.putExtra(LikedItems.LIKE_ITEM, "Liked Song #" + count);
+                final String temp_liked_item = "Liked Song #" + count;
+                modifyItem.likeItem(temp_liked_item);
                 startActivity(likedItemsActivity);
                 return true;
 
@@ -78,14 +72,17 @@ public class HomeActivity extends AppCompatActivity {
                 return true;
 
             case R.id.menu_settings:
-                Intent blacklistedItems = new Intent(HomeActivity.this, BlacklistedItems.class);
+                Intent settings = new Intent(HomeActivity.this, SettingsActivity.class);
                 count++;
-                blacklistedItems.putExtra(BlacklistedItems.BLOCK_ITEM, "Blocked Song #" + count);
-                startActivity(blacklistedItems);
+                final String temp_blocked_item = "Blocked Item #" + count;
+                modifyItem.blockItem(temp_blocked_item);
+                startActivity(settings);
                 return true;
 
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
+
+
 }

@@ -19,11 +19,6 @@ public class BlacklistedItems extends AppCompatActivity {
 
     public final static String BLOCKED_ITEMS_LIST_PREF = "KEY FOR BLOCKED ITEMS PREFERENCES";
 
-    /**
-     * Type BlacklistedItems.BLOCK_SONG in intent.putStringExtra() to add song to blocked list.
-     */
-    public final static String BLOCK_ITEM = "STRING TO BLOCK A SONG";
-
     SharedPreferences blItemsPref;
     SharedPreferences.Editor blItemsPrefEdit;
 
@@ -36,14 +31,6 @@ public class BlacklistedItems extends AppCompatActivity {
 
         blItemsPref = getSharedPreferences(BLOCKED_ITEMS_LIST_PREF, MODE_PRIVATE);
         blItemsPrefEdit = blItemsPref.edit();
-
-        Intent intent = getIntent();
-
-        if (intent.hasExtra(BLOCK_ITEM)) {
-            String blockedItem = intent.getStringExtra(BLOCK_ITEM);
-            blItemsPrefEdit.putString(blockedItem, blockedItem);
-            blItemsPrefEdit.apply();
-        }
 
         //FOR TESTING
 //        for (String item : blockedItems) {

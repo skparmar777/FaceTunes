@@ -19,11 +19,6 @@ public class LikedItems extends AppCompatActivity {
 
     public final static String LIKED_ITEMS_LIST_PREF = "KEY FOR LIKED ITEMS PREFERENCES";
 
-    /**
-     * Type LikedItems.LIKE_ITEM in intent.putStringExtra() to add song to liked list.
-     */
-    public final static String LIKE_ITEM = "STRING TO BLOCK A SONG";
-
     SharedPreferences likedItemsPref;
     SharedPreferences.Editor likedItemsPrefEdit;
 
@@ -36,14 +31,6 @@ public class LikedItems extends AppCompatActivity {
 
         likedItemsPref = getSharedPreferences(LIKED_ITEMS_LIST_PREF, MODE_PRIVATE);
         likedItemsPrefEdit = likedItemsPref.edit();
-
-        Intent intent = getIntent();
-
-        if (intent.hasExtra(LIKE_ITEM)) {
-            String blockedItem = intent.getStringExtra(LIKE_ITEM);
-            likedItemsPrefEdit.putString(blockedItem, blockedItem);
-            likedItemsPrefEdit.apply();
-        }
 
         //FOR TESTING
 //        for (String item : blockedItems) {
