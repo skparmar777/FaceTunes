@@ -9,27 +9,16 @@ import android.content.SharedPreferences;
  */
 
 class ModifyItem {
-    private SharedPreferences.Editor blockedItemsEdit;
-    private SharedPreferences.Editor likedItemsEdit;
-
-
-    @SuppressLint("CommitPrefEdits")
-    ModifyItem(Context context) {
-        SharedPreferences blockedItems = context.getSharedPreferences(
-                BlacklistedItems.BLOCKED_ITEMS_LIST_PREF, Context.MODE_PRIVATE);
-        blockedItemsEdit = blockedItems.edit();
-
-        SharedPreferences likedItems = context.getSharedPreferences(
-                LikedItems.LIKED_ITEMS_LIST_PREF, Context.MODE_PRIVATE);
-        likedItemsEdit = likedItems.edit();
-    }
+    private static SharedPreferences.Editor blockedItemsEdit;
+    private static SharedPreferences.Editor likedItemsEdit;
 
     /**
      * Use this method with context to block a song.
      *
      * @param itemName name of item to block
      */
-    void blockItem(String itemName) {
+    static void blockItem(Context context, String itemName) {
+        setContext(context);
         blockedItemsEdit.putString(itemName, itemName);
         blockedItemsEdit.apply();
     }
@@ -39,19 +28,34 @@ class ModifyItem {
      *
      * @param itemName name of item to like
      */
-    void likeItem(String itemName) {
+    static void likeItem(Context context, String itemName) {
+        setContext(context);
         likedItemsEdit.putString(itemName, itemName);
         likedItemsEdit.apply();
     }
 
-    void clearLikedItems() {
+    static void clearLikedItems(Context context) {
+        setContext(context);
         likedItemsEdit.clear();
         likedItemsEdit.apply();
     }
 
-    void clearBlockedItems() {
+    static void clearBlockedItems(Context context) {
+        setContext(context);
         blockedItemsEdit.clear();
         blockedItemsEdit.apply();
     }
+
+    @SuppressLint("CommitPrefEdits")
+    private static void setContext(Context context) {
+        SharedPreferences blockedItems = context.getSharedPreferences(
+                BlacklistedItems.BLOCKED_ITEMS_LIST_PREF, Context.MODE_PRIVATE);
+        blockedItemsEdit = blockedItems.edit();
+
+        SharedPreferences likedItems = context.getSharedPreferences(
+                LikedItems.LIKED_ITEMS_LIST_PREF, Context.MODE_PRIVATE);
+        likedItemsEdit = likedItems.edit();
+    }
+
 
 }

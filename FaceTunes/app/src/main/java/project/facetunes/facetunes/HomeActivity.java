@@ -13,15 +13,12 @@ import android.widget.Toast;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private int count = 0;
-    ModifyItem modifyItem;
+    private static int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
-        modifyItem = new ModifyItem(HomeActivity.this);
 
         //TESTING SHARED PREFERENCES
         final Button clearPrefBtn = (Button) findViewById(R.id.clearPrefs);
@@ -29,8 +26,8 @@ public class HomeActivity extends AppCompatActivity {
         clearPrefBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                modifyItem.clearBlockedItems();
-                modifyItem.clearLikedItems();
+                ModifyItem.clearBlockedItems(HomeActivity.this);
+                ModifyItem.clearLikedItems(HomeActivity.this);
                 count = 0;
                 Toast.makeText(HomeActivity.this,
                         "Cleared Data", Toast.LENGTH_SHORT).show();
@@ -55,7 +52,7 @@ public class HomeActivity extends AppCompatActivity {
                 Intent likedItemsActivity = new Intent(HomeActivity.this, LikedItems.class);
                 count++;
                 final String temp_liked_item = "Liked Song #" + count;
-                modifyItem.likeItem(temp_liked_item);
+                ModifyItem.likeItem(this, temp_liked_item);
                 startActivity(likedItemsActivity);
                 return true;
 
@@ -73,9 +70,6 @@ public class HomeActivity extends AppCompatActivity {
 
             case R.id.menu_settings:
                 Intent settings = new Intent(HomeActivity.this, SettingsActivity.class);
-                count++;
-                final String temp_blocked_item = "Blocked Item #" + count;
-                modifyItem.blockItem(temp_blocked_item);
                 startActivity(settings);
                 return true;
 

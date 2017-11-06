@@ -7,7 +7,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import java.util.Set;
+
 public class SettingsActivity extends AppCompatActivity {
+
+    private static int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +29,9 @@ public class SettingsActivity extends AppCompatActivity {
                     case 1:
                         Intent blItems = new Intent(SettingsActivity.this,
                                 BlacklistedItems.class);
+                        count++;
+                        final String temp_blocked_item = "Blocked Item #" + count;
+                        ModifyItem.blockItem(SettingsActivity.this, temp_blocked_item);
                         startActivity(blItems);
                         break;
                     default:

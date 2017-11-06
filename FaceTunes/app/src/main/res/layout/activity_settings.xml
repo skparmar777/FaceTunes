@@ -8,5 +8,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:entries="@array/settings_list"
-        android:divider="@color/colorBlack"/>
+        android:divider="@android:drawable/divider_horizontal_bright"
+        android:dividerHeight="1dp"/>
 </LinearLayout>
