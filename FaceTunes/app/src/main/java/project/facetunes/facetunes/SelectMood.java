@@ -15,9 +15,11 @@ import android.widget.Toast;
 
 public class SelectMood extends AppCompatActivity {
 
-    public static final int EMOJIS_PER_CATEGORY = 5;
-    public static final String MOOD_VAL = "Key Value for specific mood";
+    private static final int EMOJIS_PER_CATEGORY = 5;
+    private static final String MOOD_VAL = "Key Value for specific mood";
     private static final int emoji_size = 36;
+
+    public static int MOOD_SELECTED;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +65,10 @@ public class SelectMood extends AppCompatActivity {
                         //TODO CHANGE TO NEW ACTIVITY WHEN MOOD GETS SELECTED
                         Intent myIntent = new Intent(SelectMood.this, HomeActivity.class);
                         myIntent.putExtra(MOOD_VAL, currentEmoji);
+
+                        //contains unicode value
+                        MOOD_SELECTED = currentEmoji;
+
                         startActivity(myIntent);
 
                     }

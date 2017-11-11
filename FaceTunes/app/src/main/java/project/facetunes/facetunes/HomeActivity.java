@@ -74,7 +74,9 @@ public class HomeActivity extends AppCompatActivity {
         }
     }
 
-    /** Called when the user touches the button */
+    /**
+     * Called when the user touches the button
+     */
     public void sendMessage(View view) {
         // Do something in response to button click
         Toast.makeText(this, "Launch Camera", Toast.LENGTH_SHORT).show();
