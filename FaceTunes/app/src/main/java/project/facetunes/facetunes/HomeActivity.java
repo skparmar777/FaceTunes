@@ -1,7 +1,6 @@
 package project.facetunes.facetunes;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -48,7 +47,6 @@ public class HomeActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_liked_songs:
-                //Start liked songs activity
                 Intent likedItemsActivity = new Intent(HomeActivity.this, LikedItems.class);
                 count++;
                 final String temp_liked_item = "Liked Song #" + count;
@@ -57,10 +55,8 @@ public class HomeActivity extends AppCompatActivity {
                 return true;
 
             case R.id.menu_playlist:
-                //Start playlist activity
-                Toast.makeText(this,
-                        "Start Playlist Activity", Toast.LENGTH_SHORT).show();
-
+                Intent savedPlaylistsActivity = new Intent(HomeActivity.this, SavedPlaylists.class);
+                startActivity(savedPlaylistsActivity);
                 return true;
 
             case R.id.menu_select_mood:
@@ -78,5 +74,12 @@ public class HomeActivity extends AppCompatActivity {
         }
     }
 
+    /** Called when the user touches the button */
+    public void sendMessage(View view) {
+        // Do something in response to button click
+        Toast.makeText(this, "Launch Camera", Toast.LENGTH_SHORT).show();
+        Button clearPrefBtn = (Button) findViewById(R.id.clearPrefs);
+        clearPrefBtn.performClick();
+    }
 
 }

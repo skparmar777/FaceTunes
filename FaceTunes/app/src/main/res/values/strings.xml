@@ -20,6 +20,9 @@
     <!-- Liked Songs Activity Strings -->
     <string name="liked_songs_title">Liked Songs</string>
 
+    <!-- Saved Playlist Activity -->
+    <string name="saved_playlist_title">Saved Playlists</string>
+
     <!-- Alert Dialog Strings -->
     <string name="remove_item_title">Remove this item?</string>
     <string name="remove_item_yes">Yes</string>
