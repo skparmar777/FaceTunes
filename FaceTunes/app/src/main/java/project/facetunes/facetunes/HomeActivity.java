@@ -7,32 +7,19 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 public class HomeActivity extends AppCompatActivity {
 
     private static int count = 0;
+    private static final int REQUEST_IMAGE_CAPTURE = 1;
+    private static final int REQUEST_TAKE_PHOTO = 2;
+    private String mCurrentPhotoPath;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
-        //TESTING SHARED PREFERENCES
-        final Button clearPrefBtn = (Button) findViewById(R.id.clearPrefs);
-
-        clearPrefBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ModifyItem.clearBlockedItems(HomeActivity.this);
-                ModifyItem.clearLikedItems(HomeActivity.this);
-                count = 0;
-                Toast.makeText(HomeActivity.this,
-                        "Cleared Data", Toast.LENGTH_SHORT).show();
-            }
-        });
-        //END TEST OF SHARED PREFERENCES
 
     }
 
@@ -76,12 +63,23 @@ public class HomeActivity extends AppCompatActivity {
 
     /**
      * Called when the user touches the button
+     * Launches the camera API
      */
-    public void sendMessage(View view) {
+    public void launchCamera(View view) {
         // Do something in response to button click
         Toast.makeText(this, "Launch Camera", Toast.LENGTH_SHORT).show();
-        Button clearPrefBtn = (Button) findViewById(R.id.clearPrefs);
-        clearPrefBtn.performClick();
+
+        clearData(view); //TODO Comment out for final release
     }
 
+
+
+    //Clears Shared Preferences; delete for final release
+    public void clearData(View view){
+        ModifyItem.clearBlockedItems(HomeActivity.this);
+        ModifyItem.clearLikedItems(HomeActivity.this);
+        count = 0;
+        Toast.makeText(HomeActivity.this,
+                "Cleared Data", Toast.LENGTH_SHORT).show();
+    }
 }
