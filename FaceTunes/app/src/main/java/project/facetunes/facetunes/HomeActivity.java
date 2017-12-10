@@ -37,6 +37,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 
+import project.facetunes.facetunes.microsoft.helper.ImageHelper;
 import project.facetunes.facetunes.spotify.MainActivity;
 
 public class HomeActivity extends AppCompatActivity {
@@ -173,7 +174,7 @@ public class HomeActivity extends AppCompatActivity {
             if (photoFile != null) {
 
                 Uri currentPhotoURI = FileProvider.getUriForFile(this,
-                        "com.example.android.fileprovider", photoFile);
+                        "project.facetunes.facetunes.fileprovider", photoFile);
                 current_image_uri = currentPhotoURI;
                 cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, currentPhotoURI);
                 Log.d("Location", "URI: " + currentPhotoURI.toString());
@@ -191,16 +192,28 @@ public class HomeActivity extends AppCompatActivity {
 
 
         if (resultCode == RESULT_OK) {
-            Bitmap cameraImage = null;
             switch (requestCode) {
                 case REQUEST_IMAGE_CAPTURE:
-                    Bundle extras = data.getExtras(); // get the image from camera activity
-                    if (extras != null) {
-                        cameraImage = (Bitmap) extras.get("data"); //image has been set
-                    }
+                    // If image is selected successfully, set the image URI and bitmap.
 
-                    ImageView myImageView = (ImageView) findViewById(R.id.imageView);
-                    myImageView.setImageBitmap(cameraImage);
+                    Bitmap mBitmap = ImageHelper.loadSizeLimitedBitmapFromUri(
+                            current_image_uri, getContentResolver());
+                    Toast.makeText(this, current_image_uri.toString(), Toast.LENGTH_SHORT).show();
+
+                    ImageView imageView = (ImageView) findViewById(R.id.imageView);
+                    //imageView.setImageURI(current_image_uri);
+
+                    if (mBitmap != null) {
+
+                        // Show the image on screen.
+                        imageView.setImageBitmap(mBitmap);
+
+                        // Add detection log.
+                        Log.d("RecognizeActivity", "Image: " + current_image_uri + " resized to " + mBitmap.getWidth()
+                                + "x" + mBitmap.getHeight());
+
+                        //doRecognize();
+                    }
                     break;
 
                 default:
