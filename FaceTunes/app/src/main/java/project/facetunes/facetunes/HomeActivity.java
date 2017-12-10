@@ -37,13 +37,15 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 
+import project.facetunes.facetunes.spotify.MainActivity;
+
 public class HomeActivity extends AppCompatActivity {
 
     private static int count = 0;
     private static final int REQUEST_IMAGE_CAPTURE = 1;
-    public static Bitmap cameraImage; //current image
     private String mCurrentPhotoPath;
-    public String current_mood;
+    private String current_mood;
+    private Uri current_image_uri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +85,6 @@ public class HomeActivity extends AppCompatActivity {
                         current_mood = "sadness";
                     }
                     break;
-
                 case 2:
                     if(emoji_unicode == 0x1F612){
                         current_mood = "disgust";
@@ -94,11 +95,9 @@ public class HomeActivity extends AppCompatActivity {
                         current_mood = "contempt";
                     }
                     break;
-
                 case 3:
                     current_mood = "anger";
                     break;
-
                 case 4:
                     if(emoji_unicode == 0x1F636){
                         current_mood = "neutral";
@@ -106,13 +105,15 @@ public class HomeActivity extends AppCompatActivity {
                         current_mood = "neutral";
                     }
                     break;
-
                 default:
                     break;
             }
             Toast.makeText(this, "Mood: " + current_mood, Toast.LENGTH_SHORT).show();
 
-        }
+            MainActivity.EMOTION = current_mood;
+            Intent startSpotify = new Intent(HomeActivity.this, MainActivity.class);
+            startActivity(startSpotify);
+        } //End intent
 
     }
 
@@ -173,6 +174,7 @@ public class HomeActivity extends AppCompatActivity {
 
                 Uri currentPhotoURI = FileProvider.getUriForFile(this,
                         "com.example.android.fileprovider", photoFile);
+                current_image_uri = currentPhotoURI;
                 cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, currentPhotoURI);
                 Log.d("Location", "URI: " + currentPhotoURI.toString());
                 Log.d("Location", "PATH: " + mCurrentPhotoPath);
@@ -186,7 +188,10 @@ public class HomeActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data); //constructor
 
+
+
         if (resultCode == RESULT_OK) {
+            Bitmap cameraImage = null;
             switch (requestCode) {
                 case REQUEST_IMAGE_CAPTURE:
                     Bundle extras = data.getExtras(); // get the image from camera activity
