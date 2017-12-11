@@ -35,5 +35,6 @@
 
 
 
-    <string name="face_subscription_key">992f402fbf054cf6aec06c617b0ae712</string>
+    <string name="face_subscription_key_rohin">992f402fbf054cf6aec06c617b0ae712</string>
+    <string name="face_subscription_key">e2cd8d42555e4cdba41e94a6eb8e5130</string>
 </resources>
