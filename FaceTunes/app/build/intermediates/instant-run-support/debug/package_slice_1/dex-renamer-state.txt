@@ -1,0 +1,4 @@
+#Sat Dec 09 21:36:42 CST 2017
+base.0=C\:\\Data\\AndroidStudio\\Team Projects\\FaceTunes\\FaceTunes\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+path.0=classes.dex
+renamed.0=classes.dex

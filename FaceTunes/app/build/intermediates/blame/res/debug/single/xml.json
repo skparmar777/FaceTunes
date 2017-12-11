@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Data\\AndroidStudio\\Team Projects\\FaceTunes\\FaceTunes\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_blacklist.xml",
+        "source": "C:\\Data\\AndroidStudio\\Team Projects\\FaceTunes\\FaceTunes\\app\\src\\main\\res\\xml\\pref_blacklist.xml"
+    },
+    {
+        "merged": "C:\\Data\\AndroidStudio\\Team Projects\\FaceTunes\\FaceTunes\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_notification.xml",
+        "source": "C:\\Data\\AndroidStudio\\Team Projects\\FaceTunes\\FaceTunes\\app\\src\\main\\res\\xml\\pref_notification.xml"
+    },
+    {
+        "merged": "C:\\Data\\AndroidStudio\\Team Projects\\FaceTunes\\FaceTunes\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_general.xml",
+        "source": "C:\\Data\\AndroidStudio\\Team Projects\\FaceTunes\\FaceTunes\\app\\src\\main\\res\\xml\\pref_general.xml"
+    },
+    {
+        "merged": "C:\\Data\\AndroidStudio\\Team Projects\\FaceTunes\\FaceTunes\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_headers.xml",
+        "source": "C:\\Data\\AndroidStudio\\Team Projects\\FaceTunes\\FaceTunes\\app\\src\\main\\res\\xml\\pref_headers.xml"
+    },
+    {
+        "merged": "C:\\Data\\AndroidStudio\\Team Projects\\FaceTunes\\FaceTunes\\app\\build\\intermediates\\res\\merged\\debug\\xml\\file_paths.xml",
+        "source": "C:\\Data\\AndroidStudio\\Team Projects\\FaceTunes\\FaceTunes\\app\\src\\main\\res\\xml\\file_paths.xml"
+    }
+]

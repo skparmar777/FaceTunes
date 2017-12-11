@@ -1,0 +1,7 @@
+#Wed Nov 01 23:42:45 CDT 2017
+base.0=C\:\\Data\\AndroidStudio\\Team Projects\\FaceTunes\\FaceTunes\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_b5d71ecc7d34f5a934d253d8c89469f54febd8ad
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Data\\AndroidStudio\\Team Projects\\FaceTunes\\FaceTunes\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_e60b72aa404b2d0b2dc67433e5317464e934b0f7\\classes.dex
+base.1=C\:\\Data\\AndroidStudio\\Team Projects\\FaceTunes\\FaceTunes\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_e60b72aa404b2d0b2dc67433e5317464e934b0f7
+file.0=C\:\\Data\\AndroidStudio\\Team Projects\\FaceTunes\\FaceTunes\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_b5d71ecc7d34f5a934d253d8c89469f54febd8ad\\classes.dex

@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Data\\AndroidStudio\\Team Projects\\FaceTunes\\FaceTunes\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v11\\notification_template_big_media_custom.xml",
+        "source": "C:\\Users\\sm345\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\7e788113760bae35c71afb31580d6024\\res\\layout-v11\\notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "C:\\Data\\AndroidStudio\\Team Projects\\FaceTunes\\FaceTunes\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v11\\notification_media_cancel_action.xml",
+        "source": "C:\\Users\\sm345\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\7e788113760bae35c71afb31580d6024\\res\\layout-v11\\notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "C:\\Data\\AndroidStudio\\Team Projects\\FaceTunes\\FaceTunes\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v11\\notification_template_big_media.xml",
+        "source": "C:\\Users\\sm345\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\7e788113760bae35c71afb31580d6024\\res\\layout-v11\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "C:\\Data\\AndroidStudio\\Team Projects\\FaceTunes\\FaceTunes\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v11\\notification_template_big_media_narrow_custom.xml",
+        "source": "C:\\Users\\sm345\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\7e788113760bae35c71afb31580d6024\\res\\layout-v11\\notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "C:\\Data\\AndroidStudio\\Team Projects\\FaceTunes\\FaceTunes\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v11\\notification_template_big_media_narrow.xml",
+        "source": "C:\\Users\\sm345\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\7e788113760bae35c71afb31580d6024\\res\\layout-v11\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "C:\\Data\\AndroidStudio\\Team Projects\\FaceTunes\\FaceTunes\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v11\\notification_media_action.xml",
+        "source": "C:\\Users\\sm345\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\7e788113760bae35c71afb31580d6024\\res\\layout-v11\\notification_media_action.xml"
+    }
+]

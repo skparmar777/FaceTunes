@@ -1,0 +1,275 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:2:1-75:12
+MERGED from [com.spotify.sdk:spotify-android-auth-1.0.0:1.0.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-android-auth-1.0.0.aar\9d8e20c4b3b82093c552bcfe4f4c225c\AndroidManifest.xml:22:1-56:12
+MERGED from [com.spotify.sdk:spotify-player-24-noconnect-2.20b:1.0.0-beta12] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-player-24-noconnect-2.20b.aar\dfa20834b4ea123298a3abca6743019f\AndroidManifest.xml:22:1-32:12
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\7e788113760bae35c71afb31580d6024\AndroidManifest.xml:17:1-31:12
+MERGED from [com.microsoft.projectoxford:emotion:1.0.355] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\emotion-1.0.355.aar\1c3fc445b76698d8b61a9029a740c089\AndroidManifest.xml:2:1-11:12
+MERGED from [com.microsoft.projectoxford:face:1.3.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\face-1.3.0.aar\f460897dc4ec89db8e5927d497810ce2\AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\edf432bad3a7680c2b21e971d1d5f6a7\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\15ef514c130f45baa36fce67bd6dd5aa\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\69fbd007b38f0dce5b54f2baf3262683\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\7c05d98e7ffaa2717b519a1b2ee27db5\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\180651f0081af919c596feb6df84b4a9\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\e6dc499bc0298ee7f28ec2edb508442f\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\922ba2c3c38ae24114ae7dead1632e0b\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\530795a7216f74317c28c120e4599c66\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\a700de66dd78daef4b419e04e07b63a5\AndroidManifest.xml:17:1-31:12
+INJECTED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:2:1-75:12
+	package
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:3:5-42
+		INJECTED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:2:1-75:12
+		INJECTED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:2:1-75:12
+		INJECTED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:2:11-69
+uses-feature#android.hardware.camera
+ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:5:5-6:35
+	android:required
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:6:9-32
+	android:name
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:5:19-57
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:8:5-80
+	android:name
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:8:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:9:5-80
+	android:name
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:9:22-77
+application
+ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:11:5-72:19
+MERGED from [com.spotify.sdk:spotify-android-auth-1.0.0:1.0.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-android-auth-1.0.0.aar\9d8e20c4b3b82093c552bcfe4f4c225c\AndroidManifest.xml:33:5-54:19
+MERGED from [com.spotify.sdk:spotify-android-auth-1.0.0:1.0.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-android-auth-1.0.0.aar\9d8e20c4b3b82093c552bcfe4f4c225c\AndroidManifest.xml:33:5-54:19
+MERGED from [com.spotify.sdk:spotify-player-24-noconnect-2.20b:1.0.0-beta12] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-player-24-noconnect-2.20b.aar\dfa20834b4ea123298a3abca6743019f\AndroidManifest.xml:30:5-20
+MERGED from [com.spotify.sdk:spotify-player-24-noconnect-2.20b:1.0.0-beta12] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-player-24-noconnect-2.20b.aar\dfa20834b4ea123298a3abca6743019f\AndroidManifest.xml:30:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\7e788113760bae35c71afb31580d6024\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\7e788113760bae35c71afb31580d6024\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\edf432bad3a7680c2b21e971d1d5f6a7\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\edf432bad3a7680c2b21e971d1d5f6a7\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\15ef514c130f45baa36fce67bd6dd5aa\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\15ef514c130f45baa36fce67bd6dd5aa\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\69fbd007b38f0dce5b54f2baf3262683\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\69fbd007b38f0dce5b54f2baf3262683\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\7c05d98e7ffaa2717b519a1b2ee27db5\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\7c05d98e7ffaa2717b519a1b2ee27db5\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\180651f0081af919c596feb6df84b4a9\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\180651f0081af919c596feb6df84b4a9\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\e6dc499bc0298ee7f28ec2edb508442f\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\e6dc499bc0298ee7f28ec2edb508442f\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\922ba2c3c38ae24114ae7dead1632e0b\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\922ba2c3c38ae24114ae7dead1632e0b\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\530795a7216f74317c28c120e4599c66\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\530795a7216f74317c28c120e4599c66\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\a700de66dd78daef4b419e04e07b63a5\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\a700de66dd78daef4b419e04e07b63a5\AndroidManifest.xml:29:5-20
+	android:supportsRtl
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:16:9-35
+	android:label
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:14:9-41
+	android:roundIcon
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:15:9-54
+	android:icon
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:13:9-43
+	android:allowBackup
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:12:9-35
+	android:theme
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:17:9-40
+provider#android.support.v4.content.FileProvider
+ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:19:9-27:20
+	android:grantUriPermissions
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:23:13-47
+	android:authorities
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:21:13-75
+	android:exported
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:22:13-37
+	android:name
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:20:13-67
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:24:13-26:53
+	android:resource
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:26:17-51
+	android:name
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:25:17-67
+activity#project.facetunes.facetunes.HomeActivity
+ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:30:9-36:20
+	android:name
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:30:19-47
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:31:13-35:29
+action#android.intent.action.MAIN
+ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:32:17-69
+	android:name
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:32:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:34:17-77
+	android:name
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:34:27-74
+activity#project.facetunes.facetunes.SelectMood
+ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:37:9-40:58
+	android:parentActivityName
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:40:13-55
+	android:label
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:39:13-54
+	android:name
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:38:13-39
+activity#project.facetunes.facetunes.BlacklistedItems
+ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:41:9-44:62
+	android:parentActivityName
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:44:13-59
+	android:label
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:43:13-60
+	android:name
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:42:13-45
+activity#project.facetunes.facetunes.LikedItems
+ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:45:9-48:58
+	android:parentActivityName
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:48:13-55
+	android:label
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:47:13-54
+	android:name
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:46:13-39
+activity#project.facetunes.facetunes.SettingsActivity
+ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:49:9-52:58
+	android:parentActivityName
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:52:13-55
+	android:label
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:51:13-51
+	android:name
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:50:13-45
+activity#project.facetunes.facetunes.SavedPlaylists
+ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:54:9-57:58
+	android:parentActivityName
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:57:13-55
+	android:label
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:56:13-57
+	android:name
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:55:13-43
+activity#project.facetunes.facetunes.spotify.MainActivity
+ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:59:9-66:20
+	android:label
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:61:13-45
+	android:name
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:60:13-49
+activity#com.spotify.sdk.android.authentication.LoginActivity
+ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:68:9-70:74
+MERGED from [com.spotify.sdk:spotify-android-auth-1.0.0:1.0.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-android-auth-1.0.0.aar\9d8e20c4b3b82093c552bcfe4f4c225c\AndroidManifest.xml:49:9-53:20
+MERGED from [com.spotify.sdk:spotify-android-auth-1.0.0:1.0.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-android-auth-1.0.0.aar\9d8e20c4b3b82093c552bcfe4f4c225c\AndroidManifest.xml:49:9-53:20
+	android:launchMode
+		ADDED from [com.spotify.sdk:spotify-android-auth-1.0.0:1.0.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-android-auth-1.0.0.aar\9d8e20c4b3b82093c552bcfe4f4c225c\AndroidManifest.xml:51:13-48
+	android:theme
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:70:13-72
+	android:name
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml:69:13-80
+uses-sdk
+INJECTED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml
+INJECTED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml
+MERGED from [com.spotify.sdk:spotify-android-auth-1.0.0:1.0.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-android-auth-1.0.0.aar\9d8e20c4b3b82093c552bcfe4f4c225c\AndroidManifest.xml:27:5-29:41
+MERGED from [com.spotify.sdk:spotify-android-auth-1.0.0:1.0.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-android-auth-1.0.0.aar\9d8e20c4b3b82093c552bcfe4f4c225c\AndroidManifest.xml:27:5-29:41
+MERGED from [com.spotify.sdk:spotify-player-24-noconnect-2.20b:1.0.0-beta12] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-player-24-noconnect-2.20b.aar\dfa20834b4ea123298a3abca6743019f\AndroidManifest.xml:26:5-28:41
+MERGED from [com.spotify.sdk:spotify-player-24-noconnect-2.20b:1.0.0-beta12] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-player-24-noconnect-2.20b.aar\dfa20834b4ea123298a3abca6743019f\AndroidManifest.xml:26:5-28:41
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\7e788113760bae35c71afb31580d6024\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\7e788113760bae35c71afb31580d6024\AndroidManifest.xml:21:5-23:78
+MERGED from [com.microsoft.projectoxford:emotion:1.0.355] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\emotion-1.0.355.aar\1c3fc445b76698d8b61a9029a740c089\AndroidManifest.xml:5:5-7:41
+MERGED from [com.microsoft.projectoxford:emotion:1.0.355] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\emotion-1.0.355.aar\1c3fc445b76698d8b61a9029a740c089\AndroidManifest.xml:5:5-7:41
+MERGED from [com.microsoft.projectoxford:face:1.3.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\face-1.3.0.aar\f460897dc4ec89db8e5927d497810ce2\AndroidManifest.xml:6:5-8:41
+MERGED from [com.microsoft.projectoxford:face:1.3.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\face-1.3.0.aar\f460897dc4ec89db8e5927d497810ce2\AndroidManifest.xml:6:5-8:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\edf432bad3a7680c2b21e971d1d5f6a7\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\edf432bad3a7680c2b21e971d1d5f6a7\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\15ef514c130f45baa36fce67bd6dd5aa\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\15ef514c130f45baa36fce67bd6dd5aa\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\69fbd007b38f0dce5b54f2baf3262683\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\69fbd007b38f0dce5b54f2baf3262683\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\7c05d98e7ffaa2717b519a1b2ee27db5\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\7c05d98e7ffaa2717b519a1b2ee27db5\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\180651f0081af919c596feb6df84b4a9\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\180651f0081af919c596feb6df84b4a9\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\e6dc499bc0298ee7f28ec2edb508442f\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\e6dc499bc0298ee7f28ec2edb508442f\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\922ba2c3c38ae24114ae7dead1632e0b\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\922ba2c3c38ae24114ae7dead1632e0b\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\530795a7216f74317c28c120e4599c66\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\530795a7216f74317c28c120e4599c66\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\a700de66dd78daef4b419e04e07b63a5\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\a700de66dd78daef4b419e04e07b63a5\AndroidManifest.xml:21:5-23:58
+INJECTED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml
+INJECTED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\7e788113760bae35c71afb31580d6024\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml
+		ADDED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from [com.spotify.sdk:spotify-android-auth-1.0.0:1.0.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-android-auth-1.0.0.aar\9d8e20c4b3b82093c552bcfe4f4c225c\AndroidManifest.xml:31:5-67
+	android:name
+		ADDED from [com.spotify.sdk:spotify-android-auth-1.0.0:1.0.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-android-auth-1.0.0.aar\9d8e20c4b3b82093c552bcfe4f4c225c\AndroidManifest.xml:31:22-64
+activity#com.spotify.sdk.android.authentication.AuthCallbackActivity
+ADDED from [com.spotify.sdk:spotify-android-auth-1.0.0:1.0.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-android-auth-1.0.0.aar\9d8e20c4b3b82093c552bcfe4f4c225c\AndroidManifest.xml:34:9-48:20
+	android:exported
+		ADDED from [com.spotify.sdk:spotify-android-auth-1.0.0:1.0.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-android-auth-1.0.0.aar\9d8e20c4b3b82093c552bcfe4f4c225c\AndroidManifest.xml:36:13-36
+	android:theme
+		ADDED from [com.spotify.sdk:spotify-android-auth-1.0.0:1.0.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-android-auth-1.0.0.aar\9d8e20c4b3b82093c552bcfe4f4c225c\AndroidManifest.xml:37:13-72
+	android:name
+		ADDED from [com.spotify.sdk:spotify-android-auth-1.0.0:1.0.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-android-auth-1.0.0.aar\9d8e20c4b3b82093c552bcfe4f4c225c\AndroidManifest.xml:35:13-87
+intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
+ADDED from [com.spotify.sdk:spotify-android-auth-1.0.0:1.0.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-android-auth-1.0.0.aar\9d8e20c4b3b82093c552bcfe4f4c225c\AndroidManifest.xml:38:13-47:29
+action#android.intent.action.VIEW
+ADDED from [com.spotify.sdk:spotify-android-auth-1.0.0:1.0.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-android-auth-1.0.0.aar\9d8e20c4b3b82093c552bcfe4f4c225c\AndroidManifest.xml:39:17-69
+	android:name
+		ADDED from [com.spotify.sdk:spotify-android-auth-1.0.0:1.0.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-android-auth-1.0.0.aar\9d8e20c4b3b82093c552bcfe4f4c225c\AndroidManifest.xml:39:25-66
+category#android.intent.category.DEFAULT
+ADDED from [com.spotify.sdk:spotify-android-auth-1.0.0:1.0.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-android-auth-1.0.0.aar\9d8e20c4b3b82093c552bcfe4f4c225c\AndroidManifest.xml:41:17-76
+	android:name
+		ADDED from [com.spotify.sdk:spotify-android-auth-1.0.0:1.0.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-android-auth-1.0.0.aar\9d8e20c4b3b82093c552bcfe4f4c225c\AndroidManifest.xml:41:27-73
+category#android.intent.category.BROWSABLE
+ADDED from [com.spotify.sdk:spotify-android-auth-1.0.0:1.0.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-android-auth-1.0.0.aar\9d8e20c4b3b82093c552bcfe4f4c225c\AndroidManifest.xml:42:17-78
+	android:name
+		ADDED from [com.spotify.sdk:spotify-android-auth-1.0.0:1.0.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-android-auth-1.0.0.aar\9d8e20c4b3b82093c552bcfe4f4c225c\AndroidManifest.xml:42:27-75
+data
+ADDED from [com.spotify.sdk:spotify-android-auth-1.0.0:1.0.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-android-auth-1.0.0.aar\9d8e20c4b3b82093c552bcfe4f4c225c\AndroidManifest.xml:44:17-46:80
+	android:host
+		ADDED from [com.spotify.sdk:spotify-android-auth-1.0.0:1.0.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-android-auth-1.0.0.aar\9d8e20c4b3b82093c552bcfe4f4c225c\AndroidManifest.xml:45:21-73
+	android:scheme
+		ADDED from [com.spotify.sdk:spotify-android-auth-1.0.0:1.0.0] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\spotify-android-auth-1.0.0.aar\9d8e20c4b3b82093c552bcfe4f4c225c\AndroidManifest.xml:46:21-77
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\7e788113760bae35c71afb31580d6024\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\15ef514c130f45baa36fce67bd6dd5aa\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\15ef514c130f45baa36fce67bd6dd5aa\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\69fbd007b38f0dce5b54f2baf3262683\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\69fbd007b38f0dce5b54f2baf3262683\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\7c05d98e7ffaa2717b519a1b2ee27db5\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\7c05d98e7ffaa2717b519a1b2ee27db5\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\180651f0081af919c596feb6df84b4a9\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\180651f0081af919c596feb6df84b4a9\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\e6dc499bc0298ee7f28ec2edb508442f\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\e6dc499bc0298ee7f28ec2edb508442f\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\922ba2c3c38ae24114ae7dead1632e0b\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\922ba2c3c38ae24114ae7dead1632e0b\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\530795a7216f74317c28c120e4599c66\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\530795a7216f74317c28c120e4599c66\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\a700de66dd78daef4b419e04e07b63a5\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\a700de66dd78daef4b419e04e07b63a5\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\7e788113760bae35c71afb31580d6024\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\7e788113760bae35c71afb31580d6024\AndroidManifest.xml:26:9-47
+library
+ADDED from [com.microsoft.projectoxford:emotion:1.0.355] C:\Users\sm345\.gradle\caches\transforms-1\files-1.1\emotion-1.0.355.aar\1c3fc445b76698d8b61a9029a740c089\AndroidManifest.xml:9:5-16
