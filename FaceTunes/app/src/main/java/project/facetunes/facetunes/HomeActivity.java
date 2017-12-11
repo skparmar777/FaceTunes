@@ -4,6 +4,10 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Environment;
@@ -22,9 +26,15 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.microsoft.projectoxford.emotion.EmotionServiceClient;
+import com.microsoft.projectoxford.emotion.EmotionServiceRestClient;
+import com.microsoft.projectoxford.emotion.contract.RecognizeResult;
+import com.microsoft.projectoxford.emotion.rest.EmotionServiceException;
 
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -36,6 +46,7 @@ import java.nio.charset.Charset;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 
 import project.facetunes.facetunes.microsoft.helper.ImageHelper;
 import project.facetunes.facetunes.spotify.MainActivity;
@@ -46,6 +57,8 @@ public class HomeActivity extends AppCompatActivity {
     private static final int REQUEST_IMAGE_CAPTURE = 1;
     private String mCurrentPhotoPath;
     private String current_mood;
+    private Bitmap mBitmap;
+    private EmotionServiceClient client;
     private Uri current_image_uri;
 
     @Override
@@ -54,12 +67,16 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         checkPermissions();
 
-        if(!deleteImages()){
+        if (!deleteImages()) {
             Toast.makeText(this, "Failed to delete images.", Toast.LENGTH_SHORT).show();
         }
 
+        if (client == null) {
+            client = new EmotionServiceRestClient(getString(R.string.face_subscription_key));
+        }
+
         Intent getMood = getIntent();
-        if(getMood.hasExtra(SelectMood.MOOD_VAL)){
+        if (getMood.hasExtra(SelectMood.MOOD_VAL)) {
             int emoji_unicode = getMood.getIntExtra(SelectMood.MOOD_VAL, 0);
             int emoji_row = getMood.getIntExtra(SelectMood.ROW_VAL, 0);
             /* TODO Convert unicode to mood string */
@@ -74,25 +91,23 @@ public class HomeActivity extends AppCompatActivity {
             double surprise;
 
 
-            switch(emoji_row){
+            switch (emoji_row) {
                 case 0:
                     current_mood = "happiness";
                     break;
                 case 1:
-                    if(emoji_unicode == 0x1F623 ){
+                    if (emoji_unicode == 0x1F623 || emoji_unicode == 0x1F616) {
                         current_mood = "fear";
-                    }
-                    else {
+                    } else {
                         current_mood = "sadness";
                     }
                     break;
                 case 2:
-                    if(emoji_unicode == 0x1F612){
+                    if (emoji_unicode == 0x1F612) {
                         current_mood = "disgust";
-                    } else if (emoji_unicode == 0x1F644){
+                    } else if (emoji_unicode == 0x1F644) {
                         current_mood = "surprise";
-                    }
-                    else {
+                    } else {
                         current_mood = "contempt";
                     }
                     break;
@@ -100,7 +115,7 @@ public class HomeActivity extends AppCompatActivity {
                     current_mood = "anger";
                     break;
                 case 4:
-                    if(emoji_unicode == 0x1F636){
+                    if (emoji_unicode == 0x1F636) {
                         current_mood = "neutral";
                     } else {
                         current_mood = "neutral";
@@ -111,9 +126,10 @@ public class HomeActivity extends AppCompatActivity {
             }
             Toast.makeText(this, "Mood: " + current_mood, Toast.LENGTH_SHORT).show();
 
-            MainActivity.EMOTION = current_mood;
-            Intent startSpotify = new Intent(HomeActivity.this, MainActivity.class);
-            startActivity(startSpotify);
+            startSpotify(current_mood);
+//            MainActivity.EMOTION = current_mood;
+//            Intent startSpotify = new Intent(HomeActivity.this, MainActivity.class);
+//            startActivity(startSpotify);
         } //End intent
 
     }
@@ -189,16 +205,13 @@ public class HomeActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data); //constructor
 
-
-
         if (resultCode == RESULT_OK) {
             switch (requestCode) {
                 case REQUEST_IMAGE_CAPTURE:
                     // If image is selected successfully, set the image URI and bitmap.
 
-                    Bitmap mBitmap = ImageHelper.loadSizeLimitedBitmapFromUri(
+                    mBitmap = ImageHelper.loadSizeLimitedBitmapFromUri(
                             current_image_uri, getContentResolver());
-                    Toast.makeText(this, current_image_uri.toString(), Toast.LENGTH_SHORT).show();
 
                     ImageView imageView = (ImageView) findViewById(R.id.imageView);
                     //imageView.setImageURI(current_image_uri);
@@ -206,13 +219,13 @@ public class HomeActivity extends AppCompatActivity {
                     if (mBitmap != null) {
 
                         // Show the image on screen.
-                        imageView.setImageBitmap(mBitmap);
+                        //imageView.setImageBitmap(mBitmap);
 
                         // Add detection log.
                         Log.d("RecognizeActivity", "Image: " + current_image_uri + " resized to " + mBitmap.getWidth()
                                 + "x" + mBitmap.getHeight());
 
-                        //doRecognize();
+                        doRecognize();
                     }
                     break;
 
@@ -220,6 +233,142 @@ public class HomeActivity extends AppCompatActivity {
                     break;
             }
         }
+    }
+
+    public void doRecognize() {
+
+        // Do emotion detection using auto-detected faces.
+        try {
+            new doRequest(false).execute();
+        } catch (Exception e) {
+            //mEditText.append("Error encountered. Exception is: " + e.toString());
+            Log.d("Exception", e.toString());
+        }
+
+        //String faceSubscriptionKey = getString(R.string.faceSubscription_key);
+//        if (faceSubscriptionKey.equalsIgnoreCase("Please_add_the_face_subscription_key_here")) {
+//            Log.d("Face Key", "No key");
+//        } else {
+//            // Do emotion detection using face rectangles provided by Face API.
+//            try {
+//                new doRequest(true).execute();
+//            } catch (Exception e) {
+//                Log.d("Exception", e.toString());
+//            }
+//        }
+    }
+
+    private class doRequest extends AsyncTask<String, String, List<RecognizeResult>> {
+        // Store error message
+        private Exception e = null;
+        private boolean useFaceRectangles = false;
+
+        public doRequest(boolean useFaceRectangles) {
+            this.useFaceRectangles = useFaceRectangles;
+        }
+
+        @Override
+        protected List<RecognizeResult> doInBackground(String... args) {
+            if (this.useFaceRectangles == false) {
+                try {
+                    return processWithAutoFaceDetection();
+                } catch (Exception e) {
+                    this.e = e;    // Store error
+                }
+            } else {
+                try {
+                    //return processWithFaceRectangles();
+                } catch (Exception e) {
+                    this.e = e;    // Store error
+                }
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(List<RecognizeResult> result) {
+            super.onPostExecute(result);
+            // Display based on error existence
+            HashMap<String, Double> map = new HashMap<>();
+            map.put("anger", 0.0);
+            map.put("contempt", 0.0);
+            map.put("disgust", 0.0);
+            map.put("fear", 0.0);
+            map.put("happiness", 0.0);
+            map.put("neutral", 0.0);
+            map.put("sadness", 0.0);
+            map.put("surprise", 0.0);
+
+            for (RecognizeResult r : result) {
+                map.put("anger", map.get("anger") + r.scores.anger);
+                map.put("contempt", map.get("contempt") + r.scores.contempt);
+                map.put("disgust", map.get("disgust") + r.scores.disgust);
+                map.put("fear", map.get("fear") + r.scores.fear);
+                map.put("happiness", map.get("happiness") + r.scores.happiness);
+                map.put("neutral", map.get("neutral") + r.scores.happiness);
+                map.put("sadness", map.get("sadness") + r.scores.sadness);
+                map.put("surprise", map.get("surprise") + r.scores.surprise);
+            }
+            double max = 0;
+            String strongestEmotion = "";
+            for (String key : map.keySet()) {
+                if (map.get(key) > max) {
+                    max = map.get(key);
+                    strongestEmotion = key;
+                }
+            }
+
+            Toast.makeText(HomeActivity.this, "Strongest Emotion: " + strongestEmotion, Toast.LENGTH_SHORT).show();
+            startSpotify(strongestEmotion);
+
+
+            if (this.useFaceRectangles == false) {
+                //mEditText.append("\n\nRecognizing emotions with auto-detected face rectangles...\n");
+            } else {
+                // mEditText.append("\n\nRecognizing emotions with existing face rectangles from Face API...\n");
+            }
+            if (e != null) {
+                Log.d("Exception", e.getMessage());
+                this.e = null;
+            } else {
+                if (result.size() == 0) {
+                    Toast.makeText(HomeActivity.this, "No Emotion Detected", Toast.LENGTH_SHORT).show();
+                } else {
+
+                }
+            }
+        }
+    }
+
+    private List<RecognizeResult> processWithAutoFaceDetection() throws EmotionServiceException, IOException {
+        Log.d("emotion", "Start emotion detection with auto-face detection");
+
+        Gson gson = new Gson();
+
+        // Put the image into an input stream for detection.
+        ByteArrayOutputStream output = new ByteArrayOutputStream();
+        mBitmap.compress(Bitmap.CompressFormat.JPEG, 100, output);
+        ByteArrayInputStream inputStream = new ByteArrayInputStream(output.toByteArray());
+
+        long startTime = System.currentTimeMillis();
+        // -----------------------------------------------------------------------
+        // KEY SAMPLE CODE STARTS HERE
+        // -----------------------------------------------------------------------
+
+        List<RecognizeResult> result = null;
+        //
+        // Detect emotion by auto-detecting faces in the image.
+        //
+        result = this.client.recognizeImage(inputStream);
+
+        String json = gson.toJson(result);
+        Log.d("result", json);
+
+        Log.d("emotion", String.format("Detection done. Elapsed time: %d ms", (System.currentTimeMillis() - startTime)));
+        // -----------------------------------------------------------------------
+        // KEY SAMPLE CODE ENDS HERE
+        // -----------------------------------------------------------------------
+        return result;
     }
 
     private File createImageFile() throws IOException {
@@ -234,13 +383,13 @@ public class HomeActivity extends AppCompatActivity {
         return image;
     }
 
-    private boolean deleteImages(){
+    private boolean deleteImages() {
         File dir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
         File[] imageFiles = new File[0];
         if (dir != null) {
             imageFiles = dir.listFiles();
         }
-        if(imageFiles.length > 5) {
+        if (imageFiles.length > 5) {
             for (File file : imageFiles) {
                 if (!file.delete()) {
                     Toast.makeText(this, "Cant delete File", Toast.LENGTH_SHORT).show();
@@ -251,19 +400,19 @@ public class HomeActivity extends AppCompatActivity {
         return true;
     }
 
-    private void checkPermissions(){
-        if(ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA)
-                != PackageManager.PERMISSION_GRANTED){
+    private void checkPermissions() {
+        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA)
+                != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this,
                     new String[]{Manifest.permission.CAMERA}, 42);
         }
-        if(ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED){
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this,
                     new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 43);
         }
-        if(ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED){
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this,
                     new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 44);
         }
@@ -278,104 +427,9 @@ public class HomeActivity extends AppCompatActivity {
                 "Cleared Data", Toast.LENGTH_SHORT).show();
     }
 
-    public class FaceAsyncTask extends AsyncTask<String, Integer, String> {
-
-        public static final String MICROSOFT_API_URL = "https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize";
-
-        public FaceAsyncTask() {
-            super();
-        }
-
-        @Override
-        protected void onPostExecute(String strongestEmotion) {
-            super.onPostExecute(strongestEmotion);
-            /* TODO Spotify code goes here */
-            current_mood = strongestEmotion;
-        }
-
-        @Override
-        protected String doInBackground(String... strings) {
-
-            try {
-                URL url = new URL(MICROSOFT_API_URL);
-
-                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-
-                String postParameter = "{ \"url\": \"http://dreamatico.com/data_images/people/people-2.jpg\" }";
-
-                HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-                urlConnection.setRequestMethod("POST");
-                urlConnection.setRequestProperty("Accept",
-                        "application/json");
-                urlConnection.setRequestProperty("Content-Type",
-                        "application/json");
-                urlConnection.setRequestProperty("Ocp-Apim-Subscription-Key", "992f402fbf054cf6aec06c617b0ae712");
-                // setting your headers its a json in my case set your appropriate header
-
-                urlConnection.setDoOutput(true);
-                urlConnection.setDoInput(true);
-                urlConnection.connect();// setting your connection
-
-                OutputStream os = null;
-                os = new BufferedOutputStream(
-                        urlConnection.getOutputStream());
-                os.write(postParameter.getBytes());
-                os.flush();// writing your data which you post
-                System.out.println(connection.getErrorStream());
-
-                InputStream is = urlConnection.getInputStream();
-
-                StringBuffer buffer = new StringBuffer();
-                BufferedReader br = new BufferedReader(
-                        new InputStreamReader(is));
-                String line = null;
-
-                while ((line = br.readLine()) != null)
-                    buffer.append(line + "\r\n");
-
-                InputStreamReader inStreamReader = new InputStreamReader(is, Charset.forName("UTF-8"));
-                Gson gson = new Gson();
-                Face[] objects = gson.fromJson(buffer.toString(), Face[].class);
-
-                is.close();
-                urlConnection.disconnect();
-
-                HashMap<String, Double> map = new HashMap<>();
-                map.put("anger", 0.0);
-                map.put("contempt", 0.0);
-                map.put("disgust", 0.0);
-                map.put("fear", 0.0);
-                map.put("happiness", 0.0);
-                map.put("neutral", 0.0);
-                map.put("sadness", 0.0);
-                map.put("surprise", 0.0);
-
-                for (Face f : objects) {
-                    Scores s = f.getScores();
-                    map.put("anger", map.get("anger") + s.getAnger());
-                    map.put("contempt", map.get("contempt") + s.getContempt());
-                    map.put("disgust", map.get("disgust") + s.getDisgust());
-                    map.put("fear", map.get("fear") + s.getFear());
-                    map.put("happiness", map.get("happiness") + s.getHappiness());
-                    map.put("neutral", map.get("neutral") + s.getNeutral());
-                    map.put("sadness", map.get("sadness") + s.getSadness());
-                    map.put("surprise", map.get("surprise") + s.getSurprise());
-                }
-                double max = 0;
-                String strongestEmotion = "";
-                for (String key : map.keySet()) {
-                    if (map.get(key) > max) {
-                        max = map.get(key);
-                        strongestEmotion = key;
-                    }
-                }
-                return strongestEmotion;
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            return null;
-        }
+    private void startSpotify(String emotion) {
+        MainActivity.EMOTION = emotion;
+        Intent startSpotify = new Intent(HomeActivity.this, MainActivity.class);
+        startActivity(startSpotify);
     }
 }
