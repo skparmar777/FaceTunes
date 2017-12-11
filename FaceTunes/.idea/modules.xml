@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FaceTunes.iml" filepath="$PROJECT_DIR$/FaceTunes.iml" />
+      <module fileurl="file://C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\FaceTunes.iml" filepath="C:\Data\AndroidStudio\Team Projects\FaceTunes\FaceTunes\FaceTunes.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
