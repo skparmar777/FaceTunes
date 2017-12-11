@@ -318,8 +318,7 @@ public class HomeActivity extends AppCompatActivity {
                 }
             }
 
-            Toast.makeText(HomeActivity.this, "Strongest Emotion: " + strongestEmotion, Toast.LENGTH_SHORT).show();
-            startSpotify(strongestEmotion);
+
 
 
             if (this.useFaceRectangles == false) {
@@ -334,7 +333,8 @@ public class HomeActivity extends AppCompatActivity {
                 if (result.size() == 0) {
                     Toast.makeText(HomeActivity.this, "No Emotion Detected", Toast.LENGTH_SHORT).show();
                 } else {
-
+                    Toast.makeText(HomeActivity.this, "Strongest Emotion: " + strongestEmotion, Toast.LENGTH_SHORT).show();
+                    startSpotify(strongestEmotion);
                 }
             }
         }
